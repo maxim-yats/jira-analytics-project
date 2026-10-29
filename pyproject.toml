@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jira-analytics-project"
+description = "Analytics reports for Jira Server/Data Center projects using Jira Python Library"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["jira==3.10.5", "requests==2.34.0", "plotly==6.9.0"]
+
+[project.scripts]
+jira_analytics = "libs.utils.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["libs*"]
